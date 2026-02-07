@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-areas:
+  "nav nav"
+  "aside main";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: 121212;
+  color: white;
+  overflow-x: hidden;
+
+}
+
+.nav {
+  grid-area: nav;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+
+}
+
+.aside {
+  grid-area: aside;
+  padding: 10px;
+  border-right: 5px solid #333;
+
+}
+
+.main {
+  grid-area: main;
+ /* padding: 20px;
+  overflow-y: auto;
+  width: 100%; */
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+    "nav"
+    "main";
+    grid-template-columns: 1fr;
+  }    
+
+  .aside {
+    display: none;
+  }
+}

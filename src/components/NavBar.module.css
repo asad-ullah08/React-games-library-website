@@ -1,0 +1,53 @@
+.navBar {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  padding: 10px 20px;
+  width: 100%;
+  
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.brandName {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.searchBar {
+  flex-grow: 1; /* This makes the search bar take up the middle space */
+  margin: 0 40px;
+
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #333;
+  color: white;
+  outline: none;
+}
+
+.searchInput:focus {
+  outline: none; 
+
+  /* 2. Add a border color change */
+  border: 1px solid #49c8c2; 
+
+  /* 3. The Glow effect: 
+     Syntax: box-shadow: h-offset v-offset blur spread color; */
+  box-shadow: 0 0 10px 2px rgba(73, 145, 200, 0.5); 
+  
+  /* 4. Smooth transition */
+  transition: box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
