@@ -6,7 +6,7 @@ const NavBar = () => {
     <nav className={styles.navBar}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="logo" className={styles.logo} />
-        <span className={styles.brandName}>TheGameLibrary</span>
+        <span className={styles.brandName}>TheGameFolio</span>
       </div>
       <div className={styles.searchBar}>
         <input 
