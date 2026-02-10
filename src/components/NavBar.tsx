@@ -1,7 +1,13 @@
 import styles from './NavBar.module.css';
 import logo from '../assets/react.svg';
+import ColorModeSwitch from './ColorModeSwitch';
 
-const NavBar = () => {
+interface Props {
+  onToggle: () => void;
+  isDarkMode: boolean;
+}
+
+const NavBar = ({onToggle, isDarkMode}: Props) => {
   return (
     <nav className={styles.navBar}>
       <div className={styles.logoContainer}>
@@ -17,7 +23,7 @@ const NavBar = () => {
       </div>
       <div className={styles.userSection}>
         {}
-        <span>Dark Mode</span>
+        <ColorModeSwitch isDarkMode={isDarkMode} onToggle={onToggle} />
       </div>
     </nav>
   );

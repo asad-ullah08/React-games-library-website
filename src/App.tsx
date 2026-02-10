@@ -7,21 +7,24 @@ import type { Genre } from './interfaces'
 
 function App() {
   const [SelectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  const [isDarkMode, setDarkMode] = useState(true);
 
   return (
+    <div className={isDarkMode ? 'dark-theme' : 'light-theme'}>
+      <div className='nav'> 
+        <NavBar isDarkMode={isDarkMode} onToggle={() => setDarkMode(!isDarkMode)} /> 
+      </div>
     <div className="container">
-      <div className='nav'> <NavBar /> </div>
-      <aside className='aside'>
-        <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+     <aside className='aside'>
+      <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
       </aside>
 
       <main className='main'>
         <GameGrid SelectedGenre={SelectedGenre} />
 
       </main>
-
     </div>
-
+</div>
 
   )
 }
